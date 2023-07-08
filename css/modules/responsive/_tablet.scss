@@ -1,0 +1,262 @@
+@media (min-width: 768px) {
+
+    #hero-section {
+
+        #logo-container {
+
+            h1 {
+                font-size: 40px;
+                margin: 0px 20px 45px;
+            }
+        }
+
+        #image-container {
+
+            #birthday {
+                width: 373px;
+            }
+
+            #starrynight {
+                top: 269px;
+                left: 6px;
+                width: 265px;
+            }
+
+            #son-of-man {
+                top: 171px;
+                right: 135px;
+                width: 153px;
+                z-index: 1;
+            }
+
+            #weeping-woman {
+                display: block;
+                position: absolute;
+                top: -19px;
+                left: 355px;
+                width: 200px;
+                z-index: -1;
+            }
+
+            #vangogh-portrait {
+                display: block;
+                position: absolute;
+                top: 0;
+                right: 0;
+                width: 198px;
+            }
+
+            #lilies {
+                display: block;
+                position: absolute;
+                top: 280px;
+                right: 0;
+                width: 500px;
+
+            }
+        }
+
+        #hero-words {
+            font-size: 55px;
+            margin-top: 618px;
+        }
+
+        #enter-btn {
+            font-size: 55px;
+        }
+
+    }
+
+
+    #nav-bar {
+
+        #logo {
+            font-size: 24px;
+        }
+
+        ul {
+            li {
+                font-size: 21px;
+                margin: 0px 50px 0px 50px;
+            }
+        }
+
+        #contact-me-btn {
+
+            button {
+                font-size: 17px;
+                padding: 8px 13px;
+            }
+        }
+    }
+
+    //Artwork display area
+    #artwork-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+
+        .article {
+            margin-bottom: 50px;
+            text-align: center;
+
+            .more-info-btn {
+                width: 35px;
+                height: 35px;
+                font-size: 23px;
+            }
+
+            h5 {
+                font-size: 15px;
+            }
+
+            p {
+                font-size: 14px;
+            }
+
+        }
+    }
+
+    #form-for-filter {
+        .artist-row {
+            .artist-check-container {
+                .choose-artist {
+                    margin-right: 15px;
+
+                    img {
+                        width: 70px;
+                        height: 70px;
+                    }
+
+                    p {
+                        font-size: 12px;
+                    }
+                }
+            }
+        }
+    }
+
+
+    //modal-search
+    #search-modal {
+        #close-search-modal-btn {
+            font-size: 23px;
+        }
+
+        h1 {
+            top: 345px;
+            left: 120px;
+            font-size: 79px;
+        }
+
+        .modal-contents-wrapper {
+            top: 500px;
+            left: 120px;
+
+            #search-input {
+                width: 500px;
+                height: 50px;
+                font-size: 25px;
+                margin-right: 20px;
+            }
+
+            #search-btn-in-modal {
+                font-size: 50px;
+            }
+
+            #alert-no-string {
+                left: 140px;
+                font-size: 21px;
+            }
+        }
+    }
+
+
+
+    //modal
+    #modal {
+
+        #modal-content {
+            padding: 80px 30px;
+            display: flex;
+
+            h2 {
+                font-size: 28px;
+                margin-bottom: 35px;
+                line-height: 2.2rem;
+            }
+
+            img {
+                min-width: 50vh;
+            }
+
+            h3 {
+                font-size: 21px;
+                margin: 10px 0px 30px;
+            }
+
+            p {
+                margin: auto;
+                padding-left: 30px;
+                font-size: 19px;
+                line-height: 2rem;
+            }
+        }
+    }
+
+    #about-app {
+        padding: 90px 70px;
+        font-size: 30px;
+        line-height: 3rem;
+
+        h1 {
+            margin-bottom: 40px;
+        }
+
+        #back-btn {
+            font-size: 20px;
+            margin-top: 50px;
+
+            #left-arrow {
+                font-size: 23px;
+            }
+        }
+    }
+}
+
+@media (min-width: 930px) {
+    #hero-section {
+
+        #image-container {
+
+            #starrynight {
+                top: 269px;
+                left: 38px;
+                width: 305px;
+            }
+
+            #son-of-man {
+                top: 93px;
+                right: 161px;
+                width: 220px;
+                z-index: 1;
+            }
+
+            #lilies {
+                top: 241px;
+                right: 0;
+                width: 559px;
+                z-index: -99;
+            }
+        }
+
+        #hero-words {
+            font-size: 60px;
+            margin-top: 618px;
+        }
+
+        #enter-btn {
+            font-size: 60px;
+        }
+
+    }
+}

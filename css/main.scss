@@ -1,0 +1,15 @@
+@import 'modules/resets';
+@import 'modules/variables';
+@import 'modules/typography';
+
+//responsive
+@import 'modules/responsive/mobile';
+@import 'modules/responsive/tablet';
+@import 'modules/responsive/desktop';
+
+//font
+@import url('https://fonts.googleapis.com/css2?family=Lalezar&family=Oxygen&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+//icon
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css");

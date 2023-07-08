@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Aos -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="css/main.css">
+    <title>Your Personal Gallery App</title>
+</head>
+
+<body>
+    <div id="hero-section" class="hero-style" data-aos="fade-up" data-aos-offset="200">
+        <div id="logo-container">
+            <h1>
+                <span>A</span>
+                rtFindr
+            </h1>
+        </div>
+        <div id="image-container">
+            <img id="birthday" src="img/landing-page/the-birthday.jpg" alt="birthday">
+            <img id="starrynight" src="img/landing-page/starry-night.jpeg" alt="starrynight">
+            <img id="son-of-man" src="img/landing-page/TheSonOfMan.jpg" alt="sonOfMan">
+            <img id="weeping-woman" src="img/landing-page/TheWeepingWoman.jpg" alt="TheWeepingWoman">
+            <img id="vangogh-portrait" src="img/landing-page/VanGoghSelfPortrait.jpg" alt="vangoghPortrait">
+            <img id="lilies" src="img/landing-page/Lilies.jpg" alt="lilies">
+        </div>
+
+        <div id="hero-words">
+            <h5>Gallery, In your hands</h5>
+        </div>
+        <div id="enter-btn">
+            <i class="bi bi-arrow-right-circle-fill"></i>
+        </div>
+
+
+
+    </div>
+
+    <div id="body-contents-wrapper">
+        <div id="nav-bar">
+            <div id="logo">
+                <h3>
+                    <span>A</span>
+                    rtFindr
+                </h3>
+            </div>
+            <ul>
+                <li id="nav-home">Home</li>
+                <li id="nav-about-app">About App</li>
+            </ul>
+            <div id="contact-me-btn">
+                <button>Contact Me</button>
+            </div>
+        </div>
+
+        <!-- Filter by artists -->
+        <form id="form-for-filter" action="">
+            <div class="filter-wrapper">
+                <h2 id="filter-header">Artists</h2>
+                <h2 id="filter-btn"><i class="bi bi-arrow-right"></i></h2>
+            </div>
+            <div id="artist-row" class="artist-row">
+                <div class="artist-check-container">
+                    <div class="choose-artist" name="vangogh" data-value="Van Gogh">
+                        <img src="img/gogh.jpg" alt="vangogh">
+                        <p>Van Gogh</p>
+                    </div>
+                    <div class="choose-artist" name="andyworhol" data-value="Andy Warhol">
+                        <img src="img/andyworhol.jpg" alt="andywarhol">
+                        <p>Andy Warhol</p>
+                    </div>
+                    <div class="choose-artist" name="chagall" data-value="Chagall">
+                        <img src="img/Portrait_of_Marc_Chagall.jpg" alt="chagall">
+                        <p>Chagall</p>
+                    </div>
+                    <div class="choose-artist" name="picasso" data-value="Picasso">
+                        <img src="img/picasso.jpg" alt="picasso">
+                        <p>Picasso</p>
+                    </div>
+                    <div class="choose-artist" name="salvadordali" data-value="Salvador Dali">
+                        <img src="img/salvador.jpg" alt="salvadordali">
+                        <p>Salvador Dali</p>
+                    </div>
+                    <div class="choose-artist" name="fridakahlo" data-value="Frida Kahlo">
+                        <img src="img/fridakahlo.jpg" alt="fridakahlo">
+                        <p>Frida Kahlo</p>
+                    </div>
+                    <div class="choose-artist" name="henrimatisse" data-value="Henri Matisse">
+                        <img src="img/henri-matisse.jpg" alt="henrimatisse">
+                        <p>Henri Matisse</p>
+                    </div>
+                    <div class="choose-artist" name="gustavklimt" data-value="Gustav Klimt">
+                        <img src="img/gustavclimt.jpg" alt="gustavklimt">
+                        <p>Gustav Klimt</p>
+                    </div>
+                    <div class="choose-artist" name="claudemonet" data-value="Claude Monet">
+                        <img src="img/monet.jpg" alt="claudemonet">
+                        <p>Claude Monet</p>
+                    </div>
+                    <div class="choose-artist" name="davidhockney" data-value="David Hockney">
+                        <img src="img/david.jpg" alt="davidhockney">
+                        <p>David Hockney</p>
+                    </div>
+                    <div class="choose-artist" name="renemagritte" data-value="René Magritte">
+                        <img src="img/magritte.png" alt="renemagritte">
+                        <p>René Magritte</p>
+                    </div>
+                </div>
+            </div>
+        </form>
+        <div id="status-update"></div>
+
+        <!-- string search -->
+        <div class="search-wrapper">
+            <h2 id="search-header">Our Gallery</h2>
+            <h2 id="search-btn"><i class="bi bi-search"></i></h2>
+        </div>
+
+        <!-- String search modal -->
+        <form id="search-modal" action="">
+            <div id="close-search-modal-btn"><i class="bi bi-x-circle-fill"></i></div>
+            <h1>Search...</h1>
+            <div class="modal-contents-wrapper">
+                <div id="alert-no-string"></div>
+                <input id="search-input" type="text">
+                <div id="search-btn-in-modal"><i class="bi bi-search"></i></div>
+            </div>
+        </form>
+
+        <!-- order by selected option -->
+        <form id="form-for-order" action="">
+            <select id="sorting-option">
+                <option value="">Please select an option</option>
+                <option value="year">Year</option>
+                <option value="artist">Artist</option>
+            </select>
+            <button id="sort-by-option-btn">Sorting</button>
+        </form>
+
+
+
+        <div id="artwork-container"></div>
+
+        <div id="modal">
+            <div id="modal-content"></div>
+            <div id="close-btn">X</div>
+        </div>
+        <div id="about-app"></div>
+
+        <!-- footer -->
+        <footer id="footer">
+            <h2><span>A</span>rtFindr</h2>
+            <div id="footer-socialmedia">
+                <i class="bi bi-facebook"></i>
+                <i class="bi bi-instagram"></i>
+                <i class="bi bi-github"></i>
+            </div>
+            <p>Copyright© All Rights Reserved</p>
+        </footer>
+    </div>
+
+    <!-- Aos -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <!-- attach javascript -->
+    <script src="js/data.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

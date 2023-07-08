@@ -1,0 +1,234 @@
+@media (min-width: 1024px) {
+
+    #hero-section {
+        margin: 60px 90px 50px;
+
+        #logo-container {
+            h1 {
+                font-size: 46px;
+            }
+        }
+
+        #image-container {
+
+            #birthday {
+                width: 550px
+            }
+
+            #starrynight {
+                top: 323px;
+                left: 146px;
+                width: 333px;
+            }
+
+            #son-of-man {
+                top: 27px;
+                right: 284px;
+                width: 273px;
+                z-index: 1;
+            }
+
+            #weeping-woman {
+                top: -40px;
+                left: 525px;
+                width: 275px;
+            }
+
+            #vangogh-portrait {
+                width: 241px;
+            }
+
+            #lilies {
+                right: -20px;
+                width: 678px;
+            }
+        }
+
+        #hero-words {
+            font-size: 154px;
+            position: absolute;
+            top: -270px;
+            left: 70px;
+            z-index: 9999;
+            text-shadow: 6px 6px #000000;
+        }
+
+        #enter-btn {
+            font-size: 60px;
+            margin: 0;
+            margin-top: 675px;
+        }
+
+
+
+    }
+
+    #nav-bar {
+        padding: 20px 50px;
+
+        #logo {
+
+            font-size: 27px;
+
+        }
+
+        ul {
+            li {
+                font-size: 24px;
+                margin: 0px 90px 0px 90px;
+
+            }
+        }
+
+        #contact-me-btn {
+
+            button {
+                font-size: 19px;
+                padding: 10px 15px;
+
+            }
+        }
+
+    }
+
+
+    //Artwork display area
+    #artwork-container {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+
+        .article {
+            margin-bottom: 50px;
+            text-align: center;
+
+            .more-info-btn {
+                width: 35px;
+                height: 35px;
+                font-size: 23px;
+            }
+
+            h5 {
+                font-size: 15px;
+            }
+
+            p {
+                font-size: 14px;
+            }
+
+        }
+    }
+
+    #form-for-filter {
+        padding: 20px 50px;
+
+        .artist-row {
+            .artist-check-container {
+                .choose-artist {
+                    margin-right: 22px;
+
+                    img {
+                        width: 90px;
+                        height: 90px;
+                    }
+
+                    p {
+                        font-size: 15px;
+                    }
+                }
+
+            }
+        }
+    }
+
+    .search-wrapper {
+        padding: 20px 50px 10px;
+    }
+
+    //Sorting by option 
+    #form-for-order {
+        margin-left: 50px;
+    }
+
+    //modal-search
+    #search-modal {
+
+        #close-search-modal-btn {
+            font-size: 30px;
+        }
+
+        h1 {
+            top: 345px;
+            left: 200px;
+            font-size: 100px;
+        }
+
+        .modal-contents-wrapper {
+            top: 540px;
+            left: 200px;
+
+            #search-input {
+                width: 610px;
+                height: 60px;
+                font-size: 32px;
+            }
+
+            #search-btn-in-modal {
+                font-size: 55px;
+            }
+
+            #alert-no-string {
+                left: 140px;
+                font-size: 21px;
+            }
+
+        }
+    }
+
+    //modal
+    #modal {
+
+        #modal-content {
+            padding: 90px;
+
+            h2 {
+                font-size: 35px;
+                margin-bottom: 40px;
+                line-height: 2.8rem;
+            }
+
+            h3 {
+                margin: 15px 0px 40px;
+            }
+
+            p {
+                font-size: 24px;
+                line-height: 2.3rem;
+            }
+        }
+    }
+
+    #about-app {
+        padding: 100px 80px;
+        font-size: 35px;
+        line-height: 3.7rem;
+
+        #back-btn {
+            font-size: 23px;
+            margin-top: 50px;
+
+            #left-arrow {
+                font-size: 26px;
+            }
+        }
+    }
+}
+
+@media (min-width: 1200px) {
+
+    //Artwork display area
+    #artwork-container {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+
+    }
+}

@@ -1,0 +1,817 @@
+@import url("https://fonts.googleapis.com/css2?family=Lalezar&family=Oxygen&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+p {
+  font-family: "Oxygen", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: black;
+}
+
+#hero-section {
+  font-family: "Lalezar", cursive;
+  margin: 45px 20px 50px;
+  transition: all 1s ease-in-out;
+}
+#hero-section.active {
+  display: none;
+}
+#hero-section #logo-container h1 {
+  font-size: 38px;
+  color: #E2E2C4;
+  margin: 0px 20px 36px;
+}
+#hero-section #logo-container h1 span {
+  color: #EF0000;
+}
+#hero-section #image-container {
+  position: relative;
+  width: 100%;
+}
+#hero-section #image-container #birthday {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 311px;
+}
+#hero-section #image-container #starrynight {
+  position: absolute;
+  top: 218px;
+  left: 25px;
+}
+#hero-section #image-container #son-of-man {
+  position: absolute;
+  top: 76px;
+  right: 0;
+  width: 176px;
+}
+#hero-section #image-container #weeping-woman,
+#hero-section #image-container #vangogh-portrait,
+#hero-section #image-container #lilies {
+  display: none;
+}
+#hero-section #hero-words {
+  text-align: center;
+  color: #E2E2C4;
+  font-size: 50px;
+  font-weight: bolder;
+  font-style: italic;
+  margin-top: 530px;
+}
+#hero-section #enter-btn {
+  color: #E2E2C4;
+  text-align: end;
+  font-size: 47px;
+  margin: 80px 20px 0px;
+  cursor: pointer;
+}
+#hero-section #enter-btn i {
+  transition: ease 1s all;
+}
+#hero-section #enter-btn i:hover {
+  color: #EF0000;
+}
+
+#body-contents-wrapper {
+  display: none;
+  height: 100%;
+  background-color: #fcfce8;
+}
+#body-contents-wrapper.active {
+  display: block;
+}
+
+#nav-bar {
+  display: flex;
+  font-family: "Lalezar", cursive;
+  padding: 15px 30px;
+  background: #acac97;
+  border-bottom: 2px solid black;
+}
+#nav-bar #logo {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  font-size: 21px;
+}
+#nav-bar #logo span {
+  color: #EF0000;
+}
+#nav-bar ul {
+  display: flex;
+  list-style: none;
+  align-items: center;
+  justify-content: center;
+  flex: 1.5;
+}
+#nav-bar ul li {
+  cursor: pointer;
+  font-size: 17px;
+  margin: 0px 10px 0px 10px;
+}
+#nav-bar ul li:hover {
+  border-bottom: 2px solid black;
+}
+#nav-bar #contact-me-btn {
+  align-items: center;
+  display: flex;
+}
+#nav-bar #contact-me-btn button {
+  font-size: 13px;
+  font-family: "Lalezar", cursive;
+  background: black;
+  border: 2px solid #acac97;
+  color: #FFFFF4;
+  padding: 5px 7px;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+#nav-bar #contact-me-btn button:hover {
+  cursor: pointer;
+  background: #FFFFF4;
+  border: 2px solid black;
+  color: black;
+}
+
+#form-for-filter {
+  background: #dbdbc5;
+  padding: 10px 30px;
+}
+#form-for-filter .filter-wrapper {
+  display: flex;
+  justify-content: space-between;
+  font-size: 20px;
+}
+#form-for-filter .filter-wrapper #filter-btn {
+  position: relative;
+  animation: bounceRight 1.4s infinite;
+}
+@keyframes bounceRight {
+  0%, 100% {
+    right: 0;
+  }
+  50% {
+    right: -20px;
+  }
+}
+#form-for-filter .artist-row {
+  overflow-x: hidden;
+  /* Hide horizontal overflow */
+  width: 100%;
+}
+#form-for-filter .artist-row .artist-check-container {
+  display: flex;
+  flex-wrap: nowrap;
+  width: -moz-max-content;
+  width: max-content;
+  transition: transform 3.5s;
+}
+#form-for-filter .artist-row .artist-check-container .choose-artist {
+  margin-right: 6px;
+  flex: 0 0 auto;
+}
+#form-for-filter .artist-row .artist-check-container .choose-artist img {
+  width: 60px;
+  height: 60px;
+  border-radius: 70px;
+  filter: grayscale(100%);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+#form-for-filter .artist-row .artist-check-container .choose-artist img:hover {
+  box-shadow: 5px 6px 10px rgba(0, 0, 0, 0.7019607843);
+  filter: grayscale(0);
+}
+#form-for-filter .artist-row .artist-check-container .choose-artist.selected img {
+  filter: grayscale(0);
+  box-shadow: 5px 4px 3px rgb(0, 0, 0);
+}
+#form-for-filter .artist-row .artist-check-container .choose-artist p {
+  font-size: 9px;
+  text-align: center;
+}
+
+.search-wrapper {
+  display: flex;
+  justify-content: space-between;
+  font-size: 20px;
+  padding: 10px 30px 5px;
+}
+
+#search-modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  margin: auto;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.66);
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  z-index: 9999;
+  color: #FFFFF4;
+}
+#search-modal.active {
+  display: block;
+}
+#search-modal #close-search-modal-btn {
+  position: absolute;
+  top: 7px;
+  right: 10px;
+}
+#search-modal h1 {
+  position: absolute;
+  top: 250px;
+  left: 32px;
+  font-size: 50px;
+}
+#search-modal .modal-contents-wrapper {
+  position: absolute;
+  top: 350px;
+  left: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#search-modal .modal-contents-wrapper #search-input {
+  display: flex;
+  width: 300px;
+  height: 40px;
+  font-size: 20px;
+  padding-left: 10px;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.938);
+  border: none;
+  border-radius: 20px;
+  margin-right: 10px;
+}
+#search-modal .modal-contents-wrapper #search-btn-in-modal {
+  font-size: 30px;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+#search-modal .modal-contents-wrapper #alert-no-string {
+  position: absolute;
+  color: #fb3232;
+  left: 66px;
+}
+
+#form-for-order {
+  margin-left: 30px;
+}
+#form-for-order select {
+  border: 2px solid black;
+  height: 29px;
+  background: none;
+  border-radius: 5px;
+}
+
+#sort-by-option-btn {
+  border: 2px solid black;
+  background-color: #000000;
+  color: #FFFFF4;
+  border-radius: 5px;
+  padding: 5px 8px;
+  transition: all 0.3s ease;
+}
+#sort-by-option-btn:hover {
+  cursor: pointer;
+  background: #FFFFF4;
+  border: 2px solid black;
+  color: black;
+}
+
+#status-update {
+  width: 100%;
+  height: 50px;
+  font-size: 16px;
+  padding-left: 30px;
+  align-items: center;
+  background-color: black;
+  color: #FFFFF4;
+  display: none;
+}
+#status-update.active {
+  display: flex;
+}
+
+#artwork-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin-top: 20px;
+  width: 100%;
+  padding: 0px 30px;
+}
+#artwork-container .article {
+  margin-bottom: 50px;
+  text-align: center;
+}
+#artwork-container .article img {
+  width: 150px;
+  height: 220px;
+  border-radius: 220px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+#artwork-container .article .more-info-btn {
+  display: inline-block;
+  font-size: 20px;
+  border-radius: 20px;
+  width: 31px;
+  height: 31px;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+#artwork-container .article .more-info-btn:hover {
+  background-color: black;
+  color: #FFFFF4;
+}
+#artwork-container .article p {
+  font-size: 12px;
+}
+
+#modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(18, 18, 18, 0.93);
+  visibility: hidden;
+  height: 100vh;
+}
+#modal.active {
+  visibility: visible;
+}
+#modal #modal-content {
+  padding: 50px;
+  color: #FFFFF4;
+}
+#modal #modal-content h2 {
+  font-size: 20px;
+  text-align: center;
+  line-height: 1.7rem;
+  margin-bottom: 10px;
+}
+#modal #modal-content img {
+  width: 100%;
+  border-radius: 5px;
+}
+#modal #modal-content h3 {
+  font-size: 16px;
+  text-align: center;
+}
+#modal #modal-content p {
+  margin: auto;
+  font-size: 16px;
+  margin-top: 10px;
+  line-height: 1.2rem;
+}
+#modal #close-btn {
+  position: absolute;
+  top: 5px;
+  right: 15px;
+  font-size: 30px;
+  color: #FFFFF4;
+  cursor: pointer;
+}
+
+#about-app {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  padding: 90px 50px;
+  background-color: #797961;
+  color: #FFFFF4;
+  font-size: 25px;
+  line-height: 2.3rem;
+  display: none;
+}
+#about-app.active {
+  display: block;
+}
+#about-app h1 {
+  margin-bottom: 30px;
+}
+#about-app .green {
+  background-color: rgba(255, 255, 0, 0.474);
+}
+#about-app .pink {
+  background-color: rgba(238, 0, 255, 0.519);
+}
+#about-app #back-btn {
+  color: #FFFFF4;
+  font-size: 17px;
+  margin-top: 45px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+#about-app #back-btn #left-arrow {
+  font-size: 20px;
+  position: relative;
+  animation: bounceLeft 1s infinite;
+}
+@keyframes bounceLeft {
+  0%, 100% {
+    left: 0;
+  }
+  50% {
+    left: -20px;
+    /* Adjust this value to control the distance of the bounce */
+  }
+}
+#about-app #back-btn:hover {
+  color: black;
+  font-weight: 800;
+}
+#about-app #back-btn .back-btn {
+  display: flex;
+  margin: auto;
+}
+
+#footer {
+  background-color: #acac97;
+  padding: 20px;
+  text-align: center;
+}
+#footer h2 {
+  font-family: "Lalezar", cursive;
+  font-size: 30px;
+}
+#footer h2 span {
+  color: #EF0000;
+}
+#footer #footer-socialmedia {
+  font-size: 29px;
+}
+#footer #footer-socialmedia i {
+  padding: 5px;
+}
+#footer p {
+  font-size: 12px;
+  padding-top: 10px;
+}
+
+@media (min-width: 590px) {
+  #hero-section #image-container #birthday {
+    width: 373px;
+  }
+  #hero-section #image-container #starrynight {
+    top: 242px;
+    left: 58px;
+    width: 265px;
+  }
+  #hero-section #image-container #son-of-man {
+    width: 236px;
+  }
+  #hero-section #image-container #hero-words {
+    margin-top: 540px;
+  }
+}
+@media (min-width: 768px) {
+  #hero-section #logo-container h1 {
+    font-size: 40px;
+    margin: 0px 20px 45px;
+  }
+  #hero-section #image-container #birthday {
+    width: 373px;
+  }
+  #hero-section #image-container #starrynight {
+    top: 269px;
+    left: 6px;
+    width: 265px;
+  }
+  #hero-section #image-container #son-of-man {
+    top: 171px;
+    right: 135px;
+    width: 153px;
+    z-index: 1;
+  }
+  #hero-section #image-container #weeping-woman {
+    display: block;
+    position: absolute;
+    top: -19px;
+    left: 355px;
+    width: 200px;
+    z-index: -1;
+  }
+  #hero-section #image-container #vangogh-portrait {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 198px;
+  }
+  #hero-section #image-container #lilies {
+    display: block;
+    position: absolute;
+    top: 280px;
+    right: 0;
+    width: 500px;
+  }
+  #hero-section #hero-words {
+    font-size: 55px;
+    margin-top: 618px;
+  }
+  #hero-section #enter-btn {
+    font-size: 55px;
+  }
+  #nav-bar #logo {
+    font-size: 24px;
+  }
+  #nav-bar ul li {
+    font-size: 21px;
+    margin: 0px 50px 0px 50px;
+  }
+  #nav-bar #contact-me-btn button {
+    font-size: 17px;
+    padding: 8px 13px;
+  }
+  #artwork-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  #artwork-container .article {
+    margin-bottom: 50px;
+    text-align: center;
+  }
+  #artwork-container .article .more-info-btn {
+    width: 35px;
+    height: 35px;
+    font-size: 23px;
+  }
+  #artwork-container .article h5 {
+    font-size: 15px;
+  }
+  #artwork-container .article p {
+    font-size: 14px;
+  }
+  #form-for-filter .artist-row .artist-check-container .choose-artist {
+    margin-right: 15px;
+  }
+  #form-for-filter .artist-row .artist-check-container .choose-artist img {
+    width: 70px;
+    height: 70px;
+  }
+  #form-for-filter .artist-row .artist-check-container .choose-artist p {
+    font-size: 12px;
+  }
+  #search-modal #close-search-modal-btn {
+    font-size: 23px;
+  }
+  #search-modal h1 {
+    top: 345px;
+    left: 120px;
+    font-size: 79px;
+  }
+  #search-modal .modal-contents-wrapper {
+    top: 500px;
+    left: 120px;
+  }
+  #search-modal .modal-contents-wrapper #search-input {
+    width: 500px;
+    height: 50px;
+    font-size: 25px;
+    margin-right: 20px;
+  }
+  #search-modal .modal-contents-wrapper #search-btn-in-modal {
+    font-size: 50px;
+  }
+  #search-modal .modal-contents-wrapper #alert-no-string {
+    left: 140px;
+    font-size: 21px;
+  }
+  #modal #modal-content {
+    padding: 80px 30px;
+    display: flex;
+  }
+  #modal #modal-content h2 {
+    font-size: 28px;
+    margin-bottom: 35px;
+    line-height: 2.2rem;
+  }
+  #modal #modal-content img {
+    min-width: 50vh;
+  }
+  #modal #modal-content h3 {
+    font-size: 21px;
+    margin: 10px 0px 30px;
+  }
+  #modal #modal-content p {
+    margin: auto;
+    padding-left: 30px;
+    font-size: 19px;
+    line-height: 2rem;
+  }
+  #about-app {
+    padding: 90px 70px;
+    font-size: 30px;
+    line-height: 3rem;
+  }
+  #about-app h1 {
+    margin-bottom: 40px;
+  }
+  #about-app #back-btn {
+    font-size: 20px;
+    margin-top: 50px;
+  }
+  #about-app #back-btn #left-arrow {
+    font-size: 23px;
+  }
+}
+@media (min-width: 930px) {
+  #hero-section #image-container #starrynight {
+    top: 269px;
+    left: 38px;
+    width: 305px;
+  }
+  #hero-section #image-container #son-of-man {
+    top: 93px;
+    right: 161px;
+    width: 220px;
+    z-index: 1;
+  }
+  #hero-section #image-container #lilies {
+    top: 241px;
+    right: 0;
+    width: 559px;
+    z-index: -99;
+  }
+  #hero-section #hero-words {
+    font-size: 60px;
+    margin-top: 618px;
+  }
+  #hero-section #enter-btn {
+    font-size: 60px;
+  }
+}
+@media (min-width: 1024px) {
+  #hero-section {
+    margin: 60px 90px 50px;
+  }
+  #hero-section #logo-container h1 {
+    font-size: 46px;
+  }
+  #hero-section #image-container #birthday {
+    width: 550px;
+  }
+  #hero-section #image-container #starrynight {
+    top: 323px;
+    left: 146px;
+    width: 333px;
+  }
+  #hero-section #image-container #son-of-man {
+    top: 27px;
+    right: 284px;
+    width: 273px;
+    z-index: 1;
+  }
+  #hero-section #image-container #weeping-woman {
+    top: -40px;
+    left: 525px;
+    width: 275px;
+  }
+  #hero-section #image-container #vangogh-portrait {
+    width: 241px;
+  }
+  #hero-section #image-container #lilies {
+    right: -20px;
+    width: 678px;
+  }
+  #hero-section #hero-words {
+    font-size: 154px;
+    position: absolute;
+    top: -270px;
+    left: 70px;
+    z-index: 9999;
+    text-shadow: 6px 6px #000000;
+  }
+  #hero-section #enter-btn {
+    font-size: 60px;
+    margin: 0;
+    margin-top: 675px;
+  }
+  #nav-bar {
+    padding: 20px 50px;
+  }
+  #nav-bar #logo {
+    font-size: 27px;
+  }
+  #nav-bar ul li {
+    font-size: 24px;
+    margin: 0px 90px 0px 90px;
+  }
+  #nav-bar #contact-me-btn button {
+    font-size: 19px;
+    padding: 10px 15px;
+  }
+  #artwork-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+  #artwork-container .article {
+    margin-bottom: 50px;
+    text-align: center;
+  }
+  #artwork-container .article .more-info-btn {
+    width: 35px;
+    height: 35px;
+    font-size: 23px;
+  }
+  #artwork-container .article h5 {
+    font-size: 15px;
+  }
+  #artwork-container .article p {
+    font-size: 14px;
+  }
+  #form-for-filter {
+    padding: 20px 50px;
+  }
+  #form-for-filter .artist-row .artist-check-container .choose-artist {
+    margin-right: 22px;
+  }
+  #form-for-filter .artist-row .artist-check-container .choose-artist img {
+    width: 90px;
+    height: 90px;
+  }
+  #form-for-filter .artist-row .artist-check-container .choose-artist p {
+    font-size: 15px;
+  }
+  .search-wrapper {
+    padding: 20px 50px 10px;
+  }
+  #form-for-order {
+    margin-left: 50px;
+  }
+  #search-modal #close-search-modal-btn {
+    font-size: 30px;
+  }
+  #search-modal h1 {
+    top: 345px;
+    left: 200px;
+    font-size: 100px;
+  }
+  #search-modal .modal-contents-wrapper {
+    top: 540px;
+    left: 200px;
+  }
+  #search-modal .modal-contents-wrapper #search-input {
+    width: 610px;
+    height: 60px;
+    font-size: 32px;
+  }
+  #search-modal .modal-contents-wrapper #search-btn-in-modal {
+    font-size: 55px;
+  }
+  #search-modal .modal-contents-wrapper #alert-no-string {
+    left: 140px;
+    font-size: 21px;
+  }
+  #modal #modal-content {
+    padding: 90px;
+  }
+  #modal #modal-content h2 {
+    font-size: 35px;
+    margin-bottom: 40px;
+    line-height: 2.8rem;
+  }
+  #modal #modal-content h3 {
+    margin: 15px 0px 40px;
+  }
+  #modal #modal-content p {
+    font-size: 24px;
+    line-height: 2.3rem;
+  }
+  #about-app {
+    padding: 100px 80px;
+    font-size: 35px;
+    line-height: 3.7rem;
+  }
+  #about-app #back-btn {
+    font-size: 23px;
+    margin-top: 50px;
+  }
+  #about-app #back-btn #left-arrow {
+    font-size: 26px;
+  }
+}
+@media (min-width: 1200px) {
+  #artwork-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+  }
+}/*# sourceMappingURL=main.css.map */
